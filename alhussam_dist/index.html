@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أول دين</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app"></div>
+<div id="sheet" hidden><div>
+<h2 style="margin-top:0">إضافة اسم جديد</h2>
+<input id="pn" placeholder="اسم المديون">
+<input id="po" placeholder="صاحب الدين">
+<div class="row"><button class="btn" data-a="savep">حفظ</button><button class="btn gray" data-a="closesheet">إلغاء</button></div>
+</div></div>
+<div id="esheet" hidden><div>
+<h2 style="margin-top:0">تعديل الحركة</h2>
+<select id="et"><option value="debt">دين</option><option value="pay">تسديد</option></select>
+<input id="ea" type="number" inputmode="decimal" placeholder="المبلغ">
+<input id="en" placeholder="ملاحظة (اختياري)">
+<div class="row"><button class="btn" data-a="saveedit">حفظ التعديل</button><button class="btn gray" data-a="closeedit">إلغاء</button></div>
+</div></div>
+<div id="osheet" hidden><div>
+<h2 style="margin-top:0">تعديل بيانات المكتب</h2>
+<input id="on" placeholder="اسم المكتب">
+<input id="oa" placeholder="العنوان">
+<input id="op" inputmode="tel" placeholder="رقم الهاتف">
+<div class="row"><button class="btn" data-a="saveo">حفظ</button><button class="btn gray" data-a="closeo">إلغاء</button></div>
+</div></div>
+<div id="drawer" hidden data-a="closemenu"><nav>
+<div class="dh"><img class="slot" alt=""><div><b>أول دين</b><small>الإعدادات</small></div></div>
+<h2 style="margin:6px 0 0">الثيم</h2>
+<div class="seg" id="seg"><button data-a="theme" data-v="auto">تلقائي</button><button data-a="theme" data-v="light">فاتح</button><button data-a="theme" data-v="dark">داكن</button></div>
+<button class="mi" data-a="backup"><span>📤</span>تصدير نسخة احتياطية</button>
+<button class="mi" data-a="import"><span>📥</span>استيراد نسخة</button>
+<button class="mi" data-a="about"><span>ℹ️</span>حول البرنامج</button>
+</nav></div>
+<input type="file" id="ifile" accept=".hussam" hidden>
+<div id="asheet" hidden><div style="text-align:center">
+<img class="slot" style="height:90px;width:auto" alt="">
+<h2 style="margin:6px 0 0">أول دين</h2><small>الإصدار 1.0</small>
+<p style="color:var(--mut);line-height:1.9">تطبيق لتسجيل الديون وتسديدها، مع تصدير قائمة الديون وكشف حساب لكل مدين بصيغة PDF. تُحفظ البيانات على جهازك فقط، فاحرص على أخذ نسخة احتياطية بين فترة وأخرى.</p>
+<p id="aoff" style="font-weight:700"></p>
+<button class="btn" style="width:100%" data-a="closeabout">إغلاق</button>
+</div></div>
+<div id="isheet" hidden><div>
+<h2 style="margin-top:0">استيراد نسخة</h2>
+<p id="itxt" style="line-height:1.8"></p>
+<div class="row"><button class="btn red" data-a="imreplace">استبدال</button><button class="btn" data-a="immerge">دمج</button></div>
+<button class="btn gray" style="width:100%;margin-top:8px" data-a="closei">إلغاء</button>
+</div></div>
+<div id="toast" hidden></div>
+<script src="js/logo.js"></script>
+<script src="js/state.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/files.js"></script>
+<script src="js/backup.js"></script>
+<script src="js/pdf.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
